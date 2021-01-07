@@ -12,5 +12,12 @@ setInterval(()=>{
     context.fillStyle = 'skyblue';//pinta o canvas todo desta cor
     context.fillRect(0, 0, canvasSize, canvasSize);
     birdY -= birdDY -=0.5;//0.5 é a gravidade, basicamente
-    context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize)
+    context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize);
+
+    //esse 'if' é o mesmo que isso: (birdY>canvasSize)&&((birdDY=0), (birdY = 200));
+    if(birdY>canvasSize){//respawna caso caia da tela
+        birdDY = 0;
+        birdY=200;
+    }
+    
 }, interval)
