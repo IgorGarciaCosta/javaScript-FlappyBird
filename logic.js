@@ -7,6 +7,7 @@ birdSize = 24
 birdY = 200;
 birdDY = 0;//deltaY é a velocidade vertical dele
 canvasSize = 400;
+c.onclick=()=>(birdDY = 9)//faz ele subir ao clicar
 setInterval(()=>{
     context.fillStyle = 'skyblue';//pinta o canvas todo desta cor
     context.fillRect(0, 0, canvasSize, canvasSize);
